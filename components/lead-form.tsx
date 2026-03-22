@@ -45,7 +45,13 @@ export function LeadForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="card-surface space-y-5 p-6 sm:p-8">
+    <form onSubmit={handleSubmit} className="card-surface space-y-6 p-6 sm:p-8 lg:p-9">
+      <div className="space-y-3">
+        <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#16352a]">Быстрый бриф</p>
+        <h3 className="text-2xl font-semibold tracking-[-0.03em] text-[#17181c]">Оставьте заявку, чтобы обсудить модель, образец и запуск партии.</h3>
+        <p className="text-sm leading-7 text-[#5b5e65]">Форма рассчитана на B2B-запрос: нам достаточно контактов и базового описания задачи, чтобы быстро вернуться с уточнениями.</p>
+      </div>
+
       <div className="grid gap-4 md:grid-cols-2">
         {[
           ['name', 'Имя'],
@@ -54,29 +60,29 @@ export function LeadForm() {
           ['productType', 'Тип изделия'],
           ['quantity', 'Объем партии']
         ].map(([name, label]) => (
-          <label key={name} className="space-y-2 text-sm text-white/80">
+          <label key={name} className="space-y-2 text-sm text-[#50545a]">
             <span>{label}</span>
             <input
               required
               name={name}
               value={values[name as keyof typeof initialState]}
               onChange={(event) => setValues((current) => ({ ...current, [name]: event.target.value }))}
-              className="w-full rounded-2xl border border-white/10 bg-black/30 px-4 py-3 text-base text-white outline-none transition focus:border-accent"
+              className="w-full rounded-2xl border border-black/10 bg-[#fcfbf8] px-4 py-3.5 text-base text-[#17181c] outline-none transition focus:border-[#16352a] focus:bg-white"
               placeholder={label}
             />
           </label>
         ))}
       </div>
 
-      <label className="space-y-2 text-sm text-white/80">
+      <label className="space-y-2 text-sm text-[#50545a]">
         <span>Комментарий</span>
         <textarea
           name="comment"
           rows={5}
           value={values.comment}
           onChange={(event) => setValues((current) => ({ ...current, comment: event.target.value }))}
-          className="w-full rounded-2xl border border-white/10 bg-black/30 px-4 py-3 text-base text-white outline-none transition focus:border-accent"
-          placeholder="Опишите изделие, материалы, сроки, целевой канал продаж или другие важные детали."
+          className="w-full rounded-2xl border border-black/10 bg-[#fcfbf8] px-4 py-3.5 text-base text-[#17181c] outline-none transition focus:border-[#16352a] focus:bg-white"
+          placeholder="Например: мужские джемперы, партия 300 шт, нужен образец и срок запуска до начала сезона."
         />
       </label>
 
@@ -97,15 +103,19 @@ export function LeadForm() {
         className="hidden"
       />
 
-      <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+      <div className="rounded-2xl border border-[#16352a]/10 bg-[#16352a]/[0.04] px-4 py-4 text-sm leading-7 text-[#4f544f]">
+        Обычно для старта достаточно прислать фото, референс, описание модели или примерный объем — дальше мы поможем структурировать задачу.
+      </div>
+
+      <div className="flex flex-col gap-4 border-t border-black/[0.06] pt-2 sm:flex-row sm:items-center sm:justify-between">
         <button
           type="submit"
           disabled={status.type === 'loading'}
-          className="inline-flex items-center justify-center rounded-full bg-accent px-6 py-3 text-sm font-semibold text-white transition hover:translate-y-[-1px] hover:bg-[#1d4738] disabled:cursor-not-allowed disabled:opacity-70"
+          className="inline-flex items-center justify-center rounded-full bg-[#17181c] px-6 py-3.5 text-sm font-semibold text-white transition hover:translate-y-[-1px] hover:bg-black disabled:cursor-not-allowed disabled:opacity-70"
         >
           {status.type === 'loading' ? 'Отправка…' : 'Отправить заявку'}
         </button>
-        <p className={`max-w-md text-sm ${status.type === 'error' ? 'text-red-300' : 'text-white/70'}`}>{status.message}</p>
+        <p className={`max-w-md text-sm leading-6 ${status.type === 'error' ? 'text-red-600' : 'text-[#5b5e65]'}`}>{status.message}</p>
       </div>
     </form>
   );
