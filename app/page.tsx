@@ -411,23 +411,35 @@ export default function HomePage() {
           </a>
         </div>
 
-        <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+        <div className="columns-1 gap-5 md:columns-2 xl:columns-3 [&>article]:mb-5">
           {galleryItems.map((item, index) => {
-            const gridClasses = index === 0 ? 'xl:col-span-2' : '';
+            const aspectClasses = [
+              'aspect-[16/10]',
+              'aspect-[4/5]',
+              'aspect-[4/3]',
+              'aspect-[4/5]',
+              'aspect-[16/10]',
+              'aspect-[4/3]',
+              'aspect-[5/6]',
+              'aspect-[4/3]',
+              'aspect-[4/5]',
+              'aspect-[16/10]',
+              'aspect-[4/3]'
+            ][index] ?? 'aspect-[4/3]';
 
             return (
               <article
                 key={item.title}
-                className={`group relative overflow-hidden rounded-[30px] border border-black/[0.06] bg-white shadow-[0_20px_55px_rgba(19,25,22,0.08)] transition hover:-translate-y-1 hover:shadow-[0_28px_65px_rgba(19,25,22,0.12)] ${gridClasses}`}
+                className="group relative break-inside-avoid overflow-hidden rounded-[30px] border border-black/[0.06] bg-white shadow-[0_20px_55px_rgba(19,25,22,0.08)] transition hover:-translate-y-1 hover:shadow-[0_28px_65px_rgba(19,25,22,0.12)]"
               >
-                <div className="relative aspect-[4/3] min-h-[260px]">
+                <div className={`relative min-h-[260px] ${aspectClasses}`}>
                   <Image src={item.image} alt={item.title} fill className="object-cover transition duration-700 group-hover:scale-105" />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#131518]/85 via-[#131518]/20 to-transparent" />
                   <div className="absolute inset-x-0 bottom-0 p-5 sm:p-6">
-                  <span className="inline-flex rounded-full border border-white/15 bg-white/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-white/80">
-                    {item.category}
-                  </span>
-                  <h3 className="mt-4 text-2xl font-semibold tracking-[-0.03em] text-white">{item.title}</h3>
+                    <span className="inline-flex rounded-full border border-white/15 bg-white/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-white/80">
+                      {item.category}
+                    </span>
+                    <h3 className="mt-4 text-2xl font-semibold tracking-[-0.03em] text-white">{item.title}</h3>
                     <p className="mt-2 max-w-xl text-sm leading-7 text-white/75">{item.description}</p>
                   </div>
                 </div>
