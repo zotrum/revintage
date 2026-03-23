@@ -26,14 +26,38 @@ const heroPoints = [
 ];
 
 const productCategories = [
-  'Кардиганы',
-  'Джемперы',
-  'Свитеры',
-  'Жилеты',
-  'Шапки',
-  'Шарфы',
-  'Школьный трикотаж',
-  'Изделия под private label'
+  {
+    title: 'Кардиганы',
+    description: 'Для брендов, ритейла и сезонных запусков, где важны посадка, повторяемость и аккуратная сборка модели.'
+  },
+  {
+    title: 'Джемперы',
+    description: 'Для базового и коммерческого ассортимента, который должен стабильно работать в повторных продажах.'
+  },
+  {
+    title: 'Свитеры',
+    description: 'Для осенне-зимних коллекций, где критичны фактура, плотность и технологичность запуска.'
+  },
+  {
+    title: 'Жилеты',
+    description: 'Для школьных, корпоративных и fashion-проектов, где важна удобная адаптация под задачу клиента.'
+  },
+  {
+    title: 'Шапки',
+    description: 'Для сезонных аксессуаров и дополнительных категорий, которые можно запускать серийно под спрос.'
+  },
+  {
+    title: 'Шарфы',
+    description: 'Для комплектных решений, gift-направлений и расширения ассортимента под розницу и опт.'
+  },
+  {
+    title: 'Школьный трикотаж',
+    description: 'Для жилетов, джемперов и другой форменной продукции, где особенно важны повторяемость и дисциплина по срокам.'
+  },
+  {
+    title: 'Изделия под private label',
+    description: 'Для брендов и продавцов, которым нужен собственный трикотажный продукт под своей маркой.'
+  }
 ];
 
 const capabilities = [
@@ -310,10 +334,10 @@ export default function HomePage() {
         </div>
         <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
           {productCategories.map((item) => (
-            <article key={item} className="card-surface group p-6 transition hover:-translate-y-1 hover:shadow-[0_22px_55px_rgba(19,25,22,0.1)]">
+            <article key={item.title} className="card-surface group p-6 transition hover:-translate-y-1 hover:shadow-[0_22px_55px_rgba(19,25,22,0.1)]">
               <div className="text-sm uppercase tracking-[0.18em] text-[#16352a]">Категория</div>
-              <h3 className="mt-5 text-xl font-medium text-[#17181c]">{item}</h3>
-              <p className="mt-3 text-sm leading-7 text-[#5b5e65]">Подбираем конструкцию, фактуру и производственный формат так, чтобы изделие было удобно запускать, повторять и продавать.</p>
+              <h3 className="mt-5 text-xl font-medium text-[#17181c]">{item.title}</h3>
+              <p className="mt-3 text-sm leading-7 text-[#5b5e65]">{item.description}</p>
             </article>
           ))}
         </div>
