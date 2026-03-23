@@ -32,12 +32,6 @@ export const galleryItems: GalleryItem[] = [
     image: '/images/products/schoolwear/placeholder-schoolwear.svg'
   },
   {
-    title: 'Шапки',
-    category: 'Шапки',
-    description: 'Для сезонных аксессуаров и дополнительных категорий, которые можно запускать серийно под спрос.',
-    image: '/images/products/hats/20260322_1632_Image Generation_simple_compose_01kmavxs3rehx8an6wtgz4rtem.svg'
-  },
-  {
     title: 'Образцы перед запуском партии',
     category: 'Образцы',
     description: 'Тестовые изделия для согласования конструкции, фактуры, посадки и финального вида перед серией.',
@@ -48,12 +42,6 @@ export const galleryItems: GalleryItem[] = [
     category: 'Фактура',
     description: 'Показывают плотность, переплетение и качество исполнения, которые важны для оценки модели до запуска.',
     image: '/images/samples/placeholder-knit-closeup.svg'
-  },
-  {
-    title: 'Шарфы',
-    category: 'Шарфы',
-    description: 'Для комплектных решений, gift-направлений и расширения ассортимента под розницу и опт.',
-    image: '/images/samples/placeholder-scarf.svg'
   },
   {
     title: 'Производственный цех',
