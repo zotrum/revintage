@@ -32,6 +32,12 @@ export const galleryItems: GalleryItem[] = [
     image: '/images/products/schoolwear/placeholder-schoolwear.svg'
   },
   {
+    title: 'Шапки и шарфы',
+    category: 'Аксессуары',
+    description: 'Сезонные аксессуары для дополнения ассортимента, комплектных решений и повторяемых продаж.',
+    image: '/images/products/hats/placeholder-hat.svg'
+  },
+  {
     title: 'Образцы перед запуском партии',
     category: 'Образцы',
     description: 'Тестовые изделия для согласования конструкции, фактуры, посадки и финального вида перед серией.',

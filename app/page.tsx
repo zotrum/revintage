@@ -227,7 +227,7 @@ export default function HomePage() {
                   Запускаем кардиганы, джемперы, свитеры, жилеты, шапки, шарфы и школьный трикотаж: от образца до партии. Работаем с брендами, магазинами, селлерами Wildberries и Ozon и оптовыми клиентами.
                 </p>
                 <p className="max-w-3xl text-base leading-8 text-[#5e6168] sm:text-lg">
-                  Можно прийти с фото, образцом или описанием модели. Помогаем перевести идею в реальный производственный продукт. <b>Минимальный заказ — от 49 000 руб.</b>
+                  Можно прийти с фото, образцом или описанием модели. Помогаем перевести идею в реальный производственный продукт. Минимальный заказ — от 49 000 руб.
                 </p>
               </div>
 
@@ -411,13 +411,26 @@ export default function HomePage() {
           </a>
         </div>
 
-        <div className="grid auto-rows-[260px] gap-5 md:grid-cols-2 xl:grid-cols-4">
+        <div className="grid auto-rows-[240px] gap-5 md:grid-cols-2 xl:grid-cols-12">
           {galleryItems.map((item, index) => {
-            const featured = index === 0 || index === 4 || index === 6;
+            const gridClasses = [
+              'xl:col-span-5 xl:row-span-2',
+              'xl:col-span-3 xl:row-span-1',
+              'xl:col-span-4 xl:row-span-1',
+              'xl:col-span-4 xl:row-span-1',
+              'xl:col-span-3 xl:row-span-1',
+              'xl:col-span-5 xl:row-span-1',
+              'xl:col-span-4 xl:row-span-2',
+              'xl:col-span-4 xl:row-span-1',
+              'xl:col-span-4 xl:row-span-1',
+              'xl:col-span-4 xl:row-span-1',
+              'xl:col-span-4 xl:row-span-1'
+            ][index] ?? 'xl:col-span-4 xl:row-span-1';
+
             return (
               <article
                 key={item.title}
-                className={`group relative overflow-hidden rounded-[30px] border border-black/[0.06] bg-white shadow-[0_20px_55px_rgba(19,25,22,0.08)] transition hover:-translate-y-1 hover:shadow-[0_28px_65px_rgba(19,25,22,0.12)] ${featured ? 'xl:col-span-2 xl:row-span-2' : ''}`}
+                className={`group relative overflow-hidden rounded-[30px] border border-black/[0.06] bg-white shadow-[0_20px_55px_rgba(19,25,22,0.08)] transition hover:-translate-y-1 hover:shadow-[0_28px_65px_rgba(19,25,22,0.12)] ${gridClasses}`}
               >
                 <div className="absolute inset-0">
                   <Image src={item.image} alt={item.title} fill className="object-cover transition duration-700 group-hover:scale-105" />
