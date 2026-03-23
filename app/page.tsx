@@ -384,6 +384,16 @@ export default function HomePage() {
       </section>
 
       <section className="section-shell section-gap pt-0 fade-in">
+        <div className="card-surface flex flex-col gap-4 p-8 sm:flex-row sm:items-center sm:justify-between sm:p-10">
+          <div className="max-w-2xl">
+            <h2 className="text-3xl font-semibold tracking-[-0.04em] text-[#17181c] sm:text-4xl">Ищете товар под Wildberries, Ozon или магазины?</h2>
+            <p className="mt-4 text-base leading-8 text-[#5b5f65]">Сделали отдельную страницу по оптовым продажам вязаной косынки — с условиями, аргументами для селлера и формой запроса.</p>
+          </div>
+          <a href="/kosynka-opt" className="inline-flex items-center justify-center rounded-full bg-[#17181c] px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-black">Перейти на страницу товара</a>
+        </div>
+      </section>
+
+      <section className="section-shell section-gap pt-0 fade-in">
         <div className="soft-panel p-8 sm:p-10">
           <div className="mb-8 max-w-3xl">
             <span className="eyebrow">Что важно знать до старта</span>
