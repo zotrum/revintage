@@ -68,6 +68,12 @@ export const galleryItems: GalleryItem[] = [
     image: '/images/products/vests/placeholder-vest.svg'
   },
   {
+    title: 'Пледы',
+    category: 'Домашний трикотаж',
+    description: 'Категория для уютного ассортимента, подарочных линеек и расширения продаж в сезонных коллекциях.',
+    image: '/images/products/scarves/placeholder-scarf.svg'
+  },
+  {
     title: 'Подготовка партии к отгрузке',
     category: 'Партии',
     description: 'Финальный этап перед выдачей или отправкой изделий заказчику.',
