@@ -10,73 +10,61 @@ export const galleryItems: GalleryItem[] = [
   {
     title: 'Кардиганы под private label',
     category: 'Кардиганы',
-    description: 'Коммерческие модели с акцентом на стабильную повторяемость и посадку партии.',
+    description: 'Категория для брендов и ритейла, где важны повторяемость модели, посадка и стабильный производственный результат.',
     image: '/images/products/cardigans/placeholder-cardigan.svg'
   },
   {
-    title: 'Джемперы для капсульных коллекций',
+    title: 'Джемперы для ритейла',
     category: 'Джемперы',
-    description: 'Базовые и fashion-решения для брендов, магазинов и маркетплейс-линеек.',
+    description: 'Практичные модели для магазинов, маркетплейсов и сезонных ассортиментных линеек.',
     image: '/images/products/jumpers/placeholder-jumper.svg'
   },
   {
-    title: 'Свитеры сезонного ассортимента',
+    title: 'Свитеры для сезонных коллекций',
     category: 'Свитеры',
-    description: 'Теплые модели под продажи в сезон с учетом плотности и конструкции вязки.',
+    description: 'Изделия для осенне-зимнего ассортимента с акцентом на фактуру, плотность и коммерческую применимость.',
     image: '/images/products/sweaters/placeholder-sweater.svg'
   },
   {
-    title: 'Шапки для розничного ассортимента',
-    category: 'Шапки',
-    description: 'Серийное производство аксессуаров с контролем размера, плотности и фурнитуры.',
-    image: '/images/products/hats/placeholder-hat.svg'
-  },
-  {
-    title: 'Шарфы и комплектные решения',
-    category: 'Шарфы',
-    description: 'Подготовка изделий для наборов и gift-ассортимента.',
-    image: '/images/products/scarves/placeholder-scarf.svg'
-  },
-  {
-    title: 'Жилеты для layered-ассортимента',
-    category: 'Жилеты',
-    description: 'Практичные модели для школьных, корпоративных и fashion-проектов.',
-    image: '/images/products/vests/placeholder-vest.svg'
-  },
-  {
-    title: 'Школьный трикотаж',
+    title: 'Школьные жилеты и джемперы',
     category: 'Schoolwear',
-    description: 'Управляемое производство для учебных заведений и поставщиков формы.',
+    description: 'Формат для школьных и корпоративных проектов, где особенно важны повторяемость и дисциплина по срокам.',
     image: '/images/products/schoolwear/placeholder-schoolwear.svg'
   },
   {
-    title: 'Крупный план вязки',
+    title: 'Образцы перед запуском партии',
+    category: 'Образцы',
+    description: 'Тестовые изделия для согласования конструкции, фактуры, посадки и финального вида перед серией.',
+    image: '/images/samples/placeholder-sample.svg'
+  },
+  {
+    title: 'Крупные планы вязки',
     category: 'Фактура',
-    description: 'Демонстрация плотности, переплетения и качества исполнения полотна.',
+    description: 'Показывают плотность, переплетение и качество исполнения, которые важны для оценки модели до запуска.',
     image: '/images/samples/placeholder-knit-closeup.svg'
   },
   {
     title: 'Производственный цех',
     category: 'Цех',
-    description: 'Фото пространства, которое подтверждает реальное производство без посредников.',
+    description: 'Подтверждение того, что за проектом стоит реальное производство, а не перепродажа чужих мощностей.',
     image: '/images/factory/placeholder-factory.svg'
   },
   {
-    title: 'Оборудование',
+    title: 'Оборудование и рабочий процесс',
     category: 'Оборудование',
-    description: 'Визуальный акцент на технологичность, контроль и стабильность результата.',
+    description: 'Процессная часть производства, которая влияет на повторяемость, сроки и управляемость партии.',
     image: '/images/factory/placeholder-equipment.svg'
   },
   {
-    title: 'Тестовые образцы',
-    category: 'Образцы',
-    description: 'Проработка изделия до запуска серии и согласования с заказчиком.',
-    image: '/images/samples/placeholder-sample.svg'
+    title: 'Ассортимент для WB и Ozon',
+    category: 'Marketplace',
+    description: 'Категории изделий для селлеров, которым нужен понятный запуск под сезонный спрос и повторяемые продажи.',
+    image: '/images/products/vests/placeholder-vest.svg'
   },
   {
-    title: 'Готовые партии',
+    title: 'Подготовка партии к отгрузке',
     category: 'Партии',
-    description: 'Подготовка изделий к отгрузке для опта, магазинов и marketplace-каналов.',
+    description: 'Финальный этап перед выдачей или отправкой изделий заказчику.',
     image: '/images/samples/placeholder-batch.svg'
   }
 ];
