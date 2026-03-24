@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
+import Script from 'next/script';
 
 import { KosynkaOptForm } from '@/components/kosynka-opt-form';
 import { MobileContactBar } from '@/components/mobile-contact-bar';
@@ -153,6 +154,21 @@ const galleryCards = [
 export default function KosynkaOptPage() {
   return (
     <main className="overflow-hidden text-[#17181c]">
+      <Script id="yandex-metrika-kosynka-opt" strategy="afterInteractive">
+        {`(function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=108216545', 'ym');
+
+    ym(108216545, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});`}
+      </Script>
+      <noscript>
+        <div>
+          <img src="https://mc.yandex.ru/watch/108216545" style={{ position: 'absolute', left: '-9999px' }} alt="" />
+        </div>
+      </noscript>
       <header className="sticky top-0 z-40 border-b border-black/[0.05] bg-[#fbfaf7]/90 backdrop-blur-xl">
         <div className="section-shell flex h-16 items-center justify-between gap-6">
           <a href="/" className="text-lg font-semibold tracking-[0.16em] text-[#17181c]">
@@ -482,7 +498,7 @@ export default function KosynkaOptPage() {
         <div className="rounded-[34px] border border-[#16352a]/10 bg-[#16352a] p-8 text-white shadow-[0_28px_70px_rgba(22,53,42,0.24)] sm:p-10">
           <div className="grid gap-8 lg:grid-cols-[0.88fr_1.12fr] lg:items-start">
             <div>
-              <span className="inline-flex rounded-full border border-white/14 bg-white/10 px-3 py-2 text-[11px] font-semibold uppercase tracking-[0.2em] text-white/85">Сильный блок для маркетплейсов</span>
+              <span className="inline-flex rounded-full border border-white/14 bg-white/10 px-3 py-2 text-[11px] font-semibold uppercase tracking-[0.2em] text-white/85">Сильный блок</span>
               <h2 className="mt-5 text-3xl font-semibold tracking-[-0.04em] text-white sm:text-5xl">Почему товар особенно удобен для Wildberries и Ozon</h2>
               <p className="mt-5 max-w-xl text-base leading-8 text-white/78">
                 Для селлеров маркетплейсов здесь сходятся сразу несколько факторов: понятная категория, компактность в упаковке, удобство логистики, возможность тестировать цвета, отличаться узором и масштабировать закупку, если спрос подтверждается.
