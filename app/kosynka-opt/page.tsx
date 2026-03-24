@@ -630,7 +630,6 @@ export default function KosynkaOptPage() {
         <div className="mb-10 max-w-3xl">
           <span className="eyebrow">Галерея</span>
           <h2 className="mt-5 text-3xl font-semibold tracking-[-0.04em] text-[#17181c] sm:text-4xl">Как можно подать товар в опте и под маркетплейсы</h2>
-          <p className="mt-4 text-base leading-8 text-[#5b5e65]">В блок удобно подставлять реальные фото разных цветов, вариантов узора, упаковки и контента для карточек товара.</p>
         </div>
         <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
           {galleryCards.map(([title, description, image]) => (
