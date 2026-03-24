@@ -177,7 +177,54 @@ export default function KosynkaOptPage() {
         <a href="/" className="mb-6 inline-flex text-sm font-medium text-[#5b5e65] transition hover:text-[#17181c]">
           ← Вернуться на сайт Revintage
         </a>
-        <div className="grid gap-8 lg:grid-cols-[1.02fr_0.98fr] lg:items-stretch">
+        <div className="grid gap-8 lg:grid-cols-[0.98fr_1.02fr] lg:items-stretch">
+          <div className="grid gap-6">
+            <article className="group relative min-h-[640px] overflow-hidden rounded-[34px] border border-black/[0.06] bg-[#ddd6cf] shadow-[0_24px_70px_rgba(19,25,22,0.14)]">
+              <Image
+                src="/images/products/hats/placeholder-hat.svg"
+                alt="Hero photo placeholder для вязаной косынки на модели"
+                fill
+                priority
+                className="object-cover transition duration-700 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#131518]/92 via-[#131518]/25 to-transparent" />
+              <div className="absolute left-5 right-5 top-5 rounded-[24px] border border-white/15 bg-black/30 px-4 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-white backdrop-blur-sm sm:left-6 sm:right-auto">
+                Hero photo placeholder
+              </div>
+              <div className="absolute inset-x-0 bottom-0 p-6 sm:p-8">
+                <div className="max-w-md rounded-[28px] border border-white/12 bg-white/10 p-5 text-white backdrop-blur-md">
+                  <div className="text-xs font-semibold uppercase tracking-[0.18em] text-white/60">Главный визуальный акцент</div>
+                  <p className="mt-3 text-2xl font-semibold tracking-[-0.04em]">Нужна сильная premium photo под Hero — на модели или в предметной подаче.</p>
+                  <p className="mt-3 text-sm leading-7 text-white/75">Этот блок уже подготовлен под замену на реальное фото товара без переработки композиции страницы.</p>
+                </div>
+              </div>
+            </article>
+
+            <div className="grid gap-4 sm:grid-cols-[0.95fr_1.05fr]">
+              <div className="rounded-[30px] bg-[#17181c] p-7 text-white shadow-[0_24px_60px_rgba(19,25,22,0.2)] sm:p-8">
+                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-white/60">Быстрый контакт</p>
+                <div className="mt-5 space-y-4">
+                  <p className="text-2xl font-semibold tracking-[-0.03em]">Если нужно быстро обсудить цену, партию, узор и цвета — выходите напрямую на производство.</p>
+                  <div className="grid gap-3 sm:grid-cols-2">
+                    <a href={PHONE_LINK} className="rounded-full bg-white px-5 py-3 text-center text-sm font-semibold text-[#17181c] transition hover:bg-[#f0ede5]">
+                      {PHONE_DISPLAY}
+                    </a>
+                    <a href={TELEGRAM_URL} target="_blank" rel="noreferrer" className="rounded-full border border-white/15 px-5 py-3 text-center text-sm font-semibold text-white transition hover:bg-white/10">
+                      Telegram
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div className="card-surface p-7 sm:p-8">
+                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#16352a]">Для кого страница</p>
+                <h2 className="mt-5 text-3xl font-semibold tracking-[-0.04em] text-[#17181c]">Оптовая страница под закупку, а не под розницу.</h2>
+                <p className="mt-4 text-sm leading-7 text-[#5b5f65]">
+                  Здесь собрана логика для B2B-покупателя: селлеров Wildberries и Ozon, магазинов, шоурумов, оптовиков и закупщиков аксессуаров.
+                </p>
+              </div>
+            </div>
+          </div>
+
           <div className="soft-panel relative overflow-hidden px-6 py-8 sm:px-8 sm:py-10 lg:px-12 lg:py-12">
             <div className="absolute -left-10 top-10 h-44 w-44 rounded-full bg-[#e7d5c1] blur-3xl" />
             <div className="absolute right-0 top-0 h-72 w-72 rounded-full bg-[#16352a]/12 blur-3xl" />
@@ -247,56 +294,8 @@ export default function KosynkaOptPage() {
               </div>
             </div>
           </div>
-
-          <div className="grid gap-6">
-            <article className="group relative min-h-[640px] overflow-hidden rounded-[34px] border border-black/[0.06] bg-[#ddd6cf] shadow-[0_24px_70px_rgba(19,25,22,0.14)]">
-              <Image
-                src="/images/products/hats/placeholder-hat.svg"
-                alt="Hero photo placeholder для вязаной косынки на модели"
-                fill
-                priority
-                className="object-cover transition duration-700 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#131518]/92 via-[#131518]/25 to-transparent" />
-              <div className="absolute left-5 right-5 top-5 rounded-[24px] border border-white/15 bg-black/30 px-4 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-white backdrop-blur-sm sm:left-6 sm:right-auto">
-                Hero photo placeholder
-              </div>
-              <div className="absolute inset-x-0 bottom-0 p-6 sm:p-8">
-                <div className="max-w-md rounded-[28px] border border-white/12 bg-white/10 p-5 text-white backdrop-blur-md">
-                  <div className="text-xs font-semibold uppercase tracking-[0.18em] text-white/60">Главный визуальный акцент</div>
-                  <p className="mt-3 text-2xl font-semibold tracking-[-0.04em]">Нужна сильная premium photo под Hero — на модели или в предметной подаче.</p>
-                  <p className="mt-3 text-sm leading-7 text-white/75">Этот блок уже подготовлен под замену на реальное фото товара без переработки композиции страницы.</p>
-                </div>
-              </div>
-            </article>
-
-            <div className="grid gap-4 sm:grid-cols-[0.95fr_1.05fr]">
-              <div className="rounded-[30px] bg-[#17181c] p-7 text-white shadow-[0_24px_60px_rgba(19,25,22,0.2)] sm:p-8">
-                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-white/60">Быстрый контакт</p>
-                <div className="mt-5 space-y-4">
-                  <p className="text-2xl font-semibold tracking-[-0.03em]">Если нужно быстро обсудить цену, партию, узор и цвета — выходите напрямую на производство.</p>
-                  <div className="grid gap-3 sm:grid-cols-2">
-                    <a href={PHONE_LINK} className="rounded-full bg-white px-5 py-3 text-center text-sm font-semibold text-[#17181c] transition hover:bg-[#f0ede5]">
-                      {PHONE_DISPLAY}
-                    </a>
-                    <a href={TELEGRAM_URL} target="_blank" rel="noreferrer" className="rounded-full border border-white/15 px-5 py-3 text-center text-sm font-semibold text-white transition hover:bg-white/10">
-                      Telegram
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div className="card-surface p-7 sm:p-8">
-                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#16352a]">Для кого страница</p>
-                <h2 className="mt-5 text-3xl font-semibold tracking-[-0.04em] text-[#17181c]">Оптовая страница под закупку, а не под розницу.</h2>
-                <p className="mt-4 text-sm leading-7 text-[#5b5f65]">
-                  Здесь собрана логика для B2B-покупателя: селлеров Wildberries и Ozon, магазинов, шоурумов, оптовиков и закупщиков аксессуаров.
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
-
       <section className="section-shell pt-0 pb-6 sm:pb-8">
         <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
           <div className="card-surface p-8 sm:p-10">
