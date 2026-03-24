@@ -179,7 +179,7 @@ export default function KosynkaOptPage() {
           <div className="grid gap-6">
             <article className="group relative min-h-[640px] overflow-hidden rounded-[34px] border border-black/[0.06] bg-[#ddd6cf] shadow-[0_24px_70px_rgba(19,25,22,0.14)]">
               <Image
-                src="/images/products/hats/placeholder-hat.svg"
+                src="/images/products/kosynka/0.png"
                 alt="Вязаная косынка оптом для Wildberries, Ozon и магазинов"
                 fill
                 priority
