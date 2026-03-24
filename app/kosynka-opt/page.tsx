@@ -180,20 +180,20 @@ export default function KosynkaOptPage() {
             <article className="group relative min-h-[640px] overflow-hidden rounded-[34px] border border-black/[0.06] bg-[#ddd6cf] shadow-[0_24px_70px_rgba(19,25,22,0.14)]">
               <Image
                 src="/images/products/hats/placeholder-hat.svg"
-                alt="Hero photo placeholder для вязаной косынки на модели"
+                alt="Вязаная косынка оптом для Wildberries, Ozon и магазинов"
                 fill
                 priority
                 className="object-cover transition duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#131518]/92 via-[#131518]/25 to-transparent" />
               <div className="absolute left-5 right-5 top-5 rounded-[24px] border border-white/15 bg-black/30 px-4 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-white backdrop-blur-sm sm:left-6 sm:right-auto">
-                Hero photo placeholder
+                Вязаная косынка оптом
               </div>
               <div className="absolute inset-x-0 bottom-0 p-6 sm:p-8">
                 <div className="max-w-md rounded-[28px] border border-white/12 bg-white/10 p-5 text-white backdrop-blur-md">
-                  <div className="text-xs font-semibold uppercase tracking-[0.18em] text-white/60">Главный визуальный акцент</div>
-                  <p className="mt-3 text-2xl font-semibold tracking-[-0.04em]">Нужна сильная premium photo под Hero — на модели или в предметной подаче.</p>
-                  <p className="mt-3 text-sm leading-7 text-white/75">Этот блок уже подготовлен под замену на реальное фото товара без переработки композиции страницы.</p>
+                  <div className="text-xs font-semibold uppercase tracking-[0.18em] text-white/60">Вязаная косынка оптом</div>
+                  <p className="mt-3 text-2xl font-semibold tracking-[-0.04em]">Товар для маркетплейсов и магазинов: компактный, визуально выразительный и удобный для запуска.</p>
+                  <p className="mt-3 text-sm leading-7 text-white/75">Подходит для тестовой партии и масштабирования: цена, вариативность по цветам и узору, понятная логистика.</p>
                 </div>
               </div>
             </article>
@@ -259,7 +259,7 @@ export default function KosynkaOptPage() {
                 </div>
               </div>
 
-              <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-5">
+              <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
                 {heroBadgeCards.map(([title, caption]) => (
                   <div key={title} className="rounded-[22px] border border-black/[0.06] bg-white/85 px-4 py-4 shadow-[0_10px_30px_rgba(19,25,22,0.04)]">
                     <div className="text-sm font-semibold text-[#17181c]">{title}</div>
@@ -304,7 +304,7 @@ export default function KosynkaOptPage() {
             </p>
           </div>
           <div className="soft-panel p-8 sm:p-10">
-            <span className="eyebrow">Premium specs block</span>
+            <span className="eyebrow">О товаре</span>
             <h2 className="mt-5 text-3xl font-semibold tracking-[-0.04em] text-[#17181c] sm:text-4xl">Коротко о товаре</h2>
             <div className="mt-6 grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
               {specsItems.map((item) => (
@@ -578,7 +578,7 @@ export default function KosynkaOptPage() {
           <div className="soft-panel p-8 sm:p-10">
             <span className="eyebrow">Пример расчета для селлера</span>
             <div className="mt-6 grid gap-4 sm:grid-cols-2">
-              {['Закупка: 290 руб', 'Цена продажи: редактируемо', 'Комиссия: редактируемо', 'Логистика: редактируемо', 'Реклама: редактируемо', 'Итоговая маржа: редактируемо'].map((item) => (
+              {['Закупка: 290 руб', 'Цена продажи: 1190 руб', 'Комиссия: 350 руб', 'Логистика: 50 руб', 'Реклама: 50 руб', 'Итоговая маржа: 740 руб'].map((item) => (
                 <div key={item} className="rounded-[24px] border border-black/[0.06] bg-white p-5 text-sm font-medium text-[#17181c]">
                   {item}
                 </div>
@@ -689,7 +689,7 @@ export default function KosynkaOptPage() {
       <section id="lead" className="section-shell section-gap">
         <div className="grid gap-8 lg:grid-cols-[0.88fr_1.12fr]">
           <div className="soft-panel p-8 sm:p-10">
-            <span className="eyebrow">Финальный CTA</span>
+            <span className="eyebrow">Запрос</span>
             <h2 className="mt-5 text-3xl font-semibold tracking-[-0.04em] text-[#17181c] sm:text-5xl">Получите оптовые условия по вязаной косынке</h2>
             <p className="mt-5 max-w-xl text-base leading-8 text-[#5b5f65]">
               Оставьте запрос — обсудим цену, партию, цвета, варианты узора и условия для Wildberries, Ozon, магазина или шоурума.
