@@ -68,7 +68,7 @@ export function KosynkaOptForm() {
   return (
     <form onSubmit={handleSubmit} className="card-surface space-y-6 p-6 sm:p-8 lg:p-9">
       <div className="rounded-[22px] border border-[#16352a]/10 bg-[#16352a]/[0.06] px-5 py-4 text-sm font-semibold text-[#16352a]">
-        Оптовая цена — до 250 руб за единицу
+        Оптовая цена — до 290 руб за единицу
       </div>
 
       <div className="space-y-3">
