@@ -170,6 +170,25 @@ const heroSecondaryGallery = [
   }
 ] as const;
 
+
+const heroSecondaryGallery = [
+  {
+    src: '/images/products/kosynka/11.png',
+    title: 'Цветовые варианты для теста',
+    description: 'Проверка нескольких оттенков в одной поставке под разные сегменты аудитории.'
+  },
+  {
+    src: '/images/products/kosynka/22.png',
+    title: 'Варианты узора и фактуры',
+    description: 'Разные визуальные решения для отличия карточки от однотипных предложений.'
+  },
+  {
+    src: '/images/products/kosynka/33.png',
+    title: 'Оптовая партия и упаковка',
+    description: 'Фокус на подготовке к поставке и повторному дозаказу при подтверждении спроса.'
+  }
+] as const;
+
 export default function KosynkaOptPage() {
   return (
     <main className="overflow-hidden text-[#17181c]">
