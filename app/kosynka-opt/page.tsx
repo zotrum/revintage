@@ -142,14 +142,32 @@ const faqItems = [
 ] as const;
 
 const galleryCards = [
-  ['Вязаная косынка для WB / Ozon', 'Подача товара на модели для маркетплейса и рекламы.', '/images/products/kosynka/1.png'],
-  ['Несколько цветовых вариантов', 'Линейка оттенков для тестов, сезонов и сегментов аудитории.', '/images/products/kosynka/2.png'],
-  ['Варианты узора', 'Разные визуальные решения под позиционирование магазина или селлера.', '/images/products/kosynka/3.png'],
-  ['Фактура и посадка', 'Крупный план вязки и силуэта для карточки товара.', '/images/products/kosynka/4.png'],
-  ['Оптовая партия', 'Партия изделий для дозаказа, тестовой закупки или регулярной поставки.', '/images/products/kosynka/5.png'],
-  ['Упаковка и подача', 'То, что влияет на восприятие товара и экономику на выходе.', '/images/products/kosynka/6.png'],
-  ['Контент для карточек товара', 'Визуалы, которые можно использовать для маркетплейсов и B2B-презентации.', '/images/products/kosynka/7.png'],
-  ['Крупный план материала', 'Фактура, которая помогает продавать изделие через контент.', '/images/products/kosynka/8.png']
+  ['Вязаная косынка для WB / Ozon', 'Подача товара на модели для маркетплейса и рекламы.', '/images/products/hats/placeholder-hat.svg'],
+  ['Несколько цветовых вариантов', 'Линейка оттенков для тестов, сезонов и сегментов аудитории.', '/images/products/scarves/placeholder-scarf.svg'],
+  ['Варианты узора', 'Разные визуальные решения под позиционирование магазина или селлера.', '/images/samples/placeholder-knit-closeup.svg'],
+  ['Фактура и посадка', 'Крупный план вязки и силуэта для карточки товара.', '/images/samples/placeholder-sample.svg'],
+  ['Оптовая партия', 'Партия изделий для дозаказа, тестовой закупки или регулярной поставки.', '/images/samples/placeholder-batch.svg'],
+  ['Упаковка и подача', 'То, что влияет на восприятие товара и экономику на выходе.', '/images/factory/placeholder-equipment.svg'],
+  ['Контент для карточек товара', 'Визуалы, которые можно использовать для маркетплейсов и B2B-презентации.', '/images/factory/placeholder-factory.svg'],
+  ['Крупный план материала', 'Фактура, которая помогает продавать изделие через контент.', '/images/products/jumpers/placeholder-jumper.svg']
+] as const;
+
+const heroSecondaryGallery = [
+  {
+    src: '/images/products/scarves/placeholder-scarf.svg',
+    title: 'Цветовые варианты для теста',
+    description: 'Проверка нескольких оттенков в одной поставке под разные сегменты аудитории.'
+  },
+  {
+    src: '/images/samples/placeholder-knit-closeup.svg',
+    title: 'Варианты узора и фактуры',
+    description: 'Разные визуальные решения для отличия карточки от однотипных предложений.'
+  },
+  {
+    src: '/images/samples/placeholder-batch.svg',
+    title: 'Оптовая партия и упаковка',
+    description: 'Фокус на подготовке к поставке и повторному дозаказу при подтверждении спроса.'
+  }
 ] as const;
 
 const heroSecondaryGallery = [
@@ -201,7 +219,7 @@ export default function KosynkaOptPage() {
             <a href="#lead">Заявка</a>
           </nav>
           <a href="#lead" className="rounded-full bg-[#17181c] px-4 py-2 text-sm font-medium text-white transition hover:bg-black">
-            Получить опт
+            Получить образец
           </a>
         </div>
       </header>
@@ -709,13 +727,7 @@ export default function KosynkaOptPage() {
             </p>
             <div className="mt-8 grid gap-3">
               <a href="#lead-form" className="rounded-[22px] bg-[#17181c] px-5 py-4 text-sm font-semibold text-white transition hover:bg-black">
-                Получить оптовые условия
-              </a>
-              <a href="#economy" className="rounded-[22px] border border-black/10 bg-white px-5 py-4 text-sm font-semibold text-[#17181c] transition hover:bg-[#f4f1eb]">
-                Запросить расчет партии
-              </a>
-              <a href="#flexibility" className="rounded-[22px] border border-[#16352a]/15 bg-[#16352a]/[0.07] px-5 py-4 text-sm font-semibold text-[#16352a] transition hover:bg-[#16352a]/[0.11]">
-                Обсудить цвета и узор
+                Получить образец
               </a>
               <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="rounded-[22px] bg-[#25d366] px-5 py-4 text-sm font-semibold text-[#07130c] transition hover:bg-[#33dd73]">
                 Написать в WhatsApp

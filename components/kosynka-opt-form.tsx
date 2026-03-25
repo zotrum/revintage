@@ -5,18 +5,10 @@ import { useMemo, useState } from 'react';
 const initialState = {
   name: '',
   phone: '',
-  salesChannel: 'Wildberries',
-  quantity: '',
-  colors: '',
-  patternNeed: 'Обсудить варианты',
   comment: '',
-  contact: '',
   company: '',
   website: ''
 };
-
-const salesChannels = ['Wildberries', 'Ozon', 'Магазин', 'Шоурум', 'Опт', 'Несколько каналов'] as const;
-const patternOptions = ['Да', 'Нет', 'Обсудить варианты'] as const;
 
 export function KosynkaOptForm() {
   const [values, setValues] = useState(initialState);
@@ -30,15 +22,10 @@ export function KosynkaOptForm() {
     const payload = {
       name: values.name,
       phone: values.phone,
-      contact: values.contact || values.phone,
-      productType: 'Вязаная косынка оптом',
-      quantity: values.quantity,
-      comment: [
-        `Где планируют продавать: ${values.salesChannel || '—'}`,
-        `Интересуют цвета: ${values.colors || '—'}`,
-        `Нужен индивидуальный узор: ${values.patternNeed || '—'}`,
-        `Комментарий: ${values.comment || '—'}`
-      ].join('\n'),
+      contact: values.phone,
+      productType: 'Запрос образца: вязаная косынка',
+      quantity: 'Запрос образца',
+      comment: values.comment || '—',
       company: values.company,
       website: values.website,
       formStartedAt
@@ -54,7 +41,10 @@ export function KosynkaOptForm() {
       if (!response.ok) {
         throw new Error(result.message || 'Ошибка отправки');
       }
-      setStatus({ type: 'success', message: result.message });
+      setStatus({
+        type: 'success',
+        message: 'Готово! Запрос на образец отправлен. Мы свяжемся с вами в ближайшее время и согласуем детали.'
+      });
       setValues(initialState);
     } catch (error) {
       setStatus({ type: 'error', message: error instanceof Error ? error.message : 'Не удалось отправить запрос.' });
@@ -72,9 +62,9 @@ export function KosynkaOptForm() {
       </div>
 
       <div className="space-y-3">
-        <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#16352a]">Оптовый запрос</p>
-        <h3 className="text-2xl font-semibold tracking-[-0.03em] text-[#17181c]">Получить оптовые условия</h3>
-        <p className="text-sm leading-7 text-[#5b5e65]">Свяжемся с вами для обсуждения партии, цены, цветов, узора и условий поставки.</p>
+        <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#16352a]">Запрос образца</p>
+        <h3 className="text-2xl font-semibold tracking-[-0.03em] text-[#17181c]">Получить образец</h3>
+        <p className="text-sm leading-7 text-[#5b5e65]">Оставьте контакт — обсудим и отправим образец вязаной косынки.</p>
       </div>
 
       <div className="grid gap-4 md:grid-cols-2">
@@ -99,73 +89,7 @@ export function KosynkaOptForm() {
             placeholder="Телефон / WhatsApp"
           />
         </label>
-
-        <label className="space-y-2 text-sm text-[#50545a]">
-          <span>Доп. контакт</span>
-          <input
-            value={values.contact}
-            onChange={(event) => updateField('contact')(event.target.value)}
-            className="w-full rounded-2xl border border-black/10 bg-[#fcfbf8] px-4 py-3.5 text-base text-[#17181c] outline-none transition focus:border-[#16352a] focus:bg-white"
-            placeholder="Telegram, email или другой контакт"
-          />
-        </label>
-
-        <label className="space-y-2 text-sm text-[#50545a]">
-          <span>Где планируете продавать</span>
-          <select
-            required
-            value={values.salesChannel}
-            onChange={(event) => updateField('salesChannel')(event.target.value)}
-            className="w-full rounded-2xl border border-black/10 bg-[#fcfbf8] px-4 py-3.5 text-base text-[#17181c] outline-none transition focus:border-[#16352a] focus:bg-white"
-          >
-            {salesChannels.map((option) => (
-              <option key={option} value={option}>
-                {option}
-              </option>
-            ))}
-          </select>
-        </label>
-
-        <label className="space-y-2 text-sm text-[#50545a]">
-          <span>Нужный объем</span>
-          <input
-            required
-            value={values.quantity}
-            onChange={(event) => updateField('quantity')(event.target.value)}
-            className="w-full rounded-2xl border border-black/10 bg-[#fcfbf8] px-4 py-3.5 text-base text-[#17181c] outline-none transition focus:border-[#16352a] focus:bg-white"
-            placeholder="Например: тестовая партия / 50 шт / регулярные поставки"
-          />
-        </label>
-
-        <label className="space-y-2 text-sm text-[#50545a]">
-          <span>Интересуют ли конкретные цвета</span>
-          <input
-            value={values.colors}
-            onChange={(event) => updateField('colors')(event.target.value)}
-            className="w-full rounded-2xl border border-black/10 bg-[#fcfbf8] px-4 py-3.5 text-base text-[#17181c] outline-none transition focus:border-[#16352a] focus:bg-white"
-            placeholder="Например: молочный, графит, бежевый"
-          />
-        </label>
       </div>
-
-      <fieldset className="space-y-3">
-        <legend className="text-sm text-[#50545a]">Нужен ли индивидуальный узор</legend>
-        <div className="grid gap-3 sm:grid-cols-3">
-          {patternOptions.map((option) => (
-            <label key={option} className={`rounded-[22px] border px-4 py-3 text-sm font-medium transition ${values.patternNeed === option ? 'border-[#16352a] bg-[#16352a]/[0.06] text-[#17181c]' : 'border-black/10 bg-[#fcfbf8] text-[#50545a]'}`}>
-              <input
-                type="radio"
-                name="patternNeed"
-                value={option}
-                checked={values.patternNeed === option}
-                onChange={(event) => updateField('patternNeed')(event.target.value)}
-                className="sr-only"
-              />
-              {option}
-            </label>
-          ))}
-        </div>
-      </fieldset>
 
       <label className="space-y-2 text-sm text-[#50545a]">
         <span>Комментарий</span>
@@ -174,23 +98,19 @@ export function KosynkaOptForm() {
           value={values.comment}
           onChange={(event) => updateField('comment')(event.target.value)}
           className="w-full rounded-2xl border border-black/10 bg-[#fcfbf8] px-4 py-3.5 text-base text-[#17181c] outline-none transition focus:border-[#16352a] focus:bg-white"
-          placeholder="Например: нужен тест под Wildberries, интересуют 3 цвета и 2 варианта узора."
+          placeholder="Например: нужен образец, интересует срок отправки."
         />
       </label>
 
       <input className="hidden" tabIndex={-1} autoComplete="off" value={values.company} onChange={(event) => updateField('company')(event.target.value)} />
       <input className="hidden" tabIndex={-1} autoComplete="off" value={values.website} onChange={(event) => updateField('website')(event.target.value)} />
 
-      <div className="rounded-2xl border border-[#16352a]/10 bg-[#16352a]/[0.04] px-4 py-4 text-sm leading-7 text-[#4f544f]">
-        Форма собрана именно под оптовый запрос: можно сразу указать канал продаж, ориентир по партии, интерес по цветам и необходимость адаптации узора.
-      </div>
-
       <div className="flex flex-col gap-4 border-t border-black/[0.06] pt-2 sm:flex-row sm:items-center sm:justify-between">
         <div className="space-y-3">
           <button type="submit" disabled={status.type === 'loading'} className="inline-flex items-center justify-center rounded-full bg-[#17181c] px-6 py-3.5 text-sm font-semibold text-white transition hover:translate-y-[-1px] hover:bg-black disabled:cursor-not-allowed disabled:opacity-70">
-            {status.type === 'loading' ? 'Отправка…' : 'Получить оптовые условия'}
+            {status.type === 'loading' ? 'Отправка…' : 'Получить образец'}
           </button>
-          <p className="text-sm leading-6 text-[#5b5e65]">Свяжемся с вами для обсуждения партии, цены, цветов, узора и условий поставки.</p>
+          <p className="text-sm leading-6 text-[#5b5e65]">Оставьте минимум контактов — менеджер свяжется и согласует отправку образца.</p>
         </div>
         <p className={`max-w-md text-sm leading-6 ${status.type === 'error' ? 'text-red-600' : 'text-[#5b5e65]'}`}>{status.message}</p>
       </div>
