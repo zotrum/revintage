@@ -154,17 +154,17 @@ const galleryCards = [
 
 const heroSecondaryGallery = [
   {
-    src: '/images/products/scarves/placeholder-scarf.svg',
+    src: '/images/products/kosynka/01.png',
     title: 'Цветовые варианты для теста',
     description: 'Проверка нескольких оттенков в одной поставке под разные сегменты аудитории.'
   },
   {
-    src: '/images/samples/placeholder-knit-closeup.svg',
+    src: '/images/products/kosynka/02.png',
     title: 'Варианты узора и фактуры',
     description: 'Разные визуальные решения для отличия карточки от однотипных предложений.'
   },
   {
-    src: '/images/samples/placeholder-batch.svg',
+    src: '/images/products/kosynka/03.png',
     title: 'Оптовая партия и упаковка',
     description: 'Фокус на подготовке к поставке и повторному дозаказу при подтверждении спроса.'
   }
