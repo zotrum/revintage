@@ -2,9 +2,10 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Script from 'next/script';
 
+import { HeroPhotoCarousel } from '@/components/hero-photo-carousel';
 import { KosynkaOptForm } from '@/components/kosynka-opt-form';
 import { MobileContactBar } from '@/components/mobile-contact-bar';
-import { BRAND_NAME, PHONE_DISPLAY, PHONE_LINK, TELEGRAM_URL, WHATSAPP_URL } from '@/lib/constants';
+import { BRAND_NAME, WHATSAPP_URL } from '@/lib/constants';
 
 export const metadata: Metadata = {
   title: 'Вязаная косынка оптом | Для Wildberries, Ozon и магазинов | Revintage',
@@ -141,14 +142,32 @@ const faqItems = [
 ] as const;
 
 const galleryCards = [
-  ['Вязаная косынка для WB / Ozon', 'Подача товара на модели для маркетплейса и рекламы.', '/images/products/kosynka/1.png'],
-  ['Несколько цветовых вариантов', 'Линейка оттенков для тестов, сезонов и сегментов аудитории.', '/images/products/kosynka/2.png'],
-  ['Варианты узора', 'Разные визуальные решения под позиционирование магазина или селлера.', '/images/products/kosynka/3.png'],
-  ['Фактура и посадка', 'Крупный план вязки и силуэта для карточки товара.', '/images/products/kosynka/4.png'],
-  ['Оптовая партия', 'Партия изделий для дозаказа, тестовой закупки или регулярной поставки.', '/images/products/kosynka/5.png'],
-  ['Упаковка и подача', 'То, что влияет на восприятие товара и экономику на выходе.', '/images/products/kosynka/6.png'],
-  ['Контент для карточек товара', 'Визуалы, которые можно использовать для маркетплейсов и B2B-презентации.', '/images/products/kosynka/7.png'],
-  ['Крупный план материала', 'Фактура, которая помогает продавать изделие через контент.', '/images/products/kosynka/8.png']
+  ['Вязаная косынка для WB / Ozon', 'Подача товара на модели для маркетплейса и рекламы.', '/images/products/hats/placeholder-hat.svg'],
+  ['Несколько цветовых вариантов', 'Линейка оттенков для тестов, сезонов и сегментов аудитории.', '/images/products/scarves/placeholder-scarf.svg'],
+  ['Варианты узора', 'Разные визуальные решения под позиционирование магазина или селлера.', '/images/samples/placeholder-knit-closeup.svg'],
+  ['Фактура и посадка', 'Крупный план вязки и силуэта для карточки товара.', '/images/samples/placeholder-sample.svg'],
+  ['Оптовая партия', 'Партия изделий для дозаказа, тестовой закупки или регулярной поставки.', '/images/samples/placeholder-batch.svg'],
+  ['Упаковка и подача', 'То, что влияет на восприятие товара и экономику на выходе.', '/images/factory/placeholder-equipment.svg'],
+  ['Контент для карточек товара', 'Визуалы, которые можно использовать для маркетплейсов и B2B-презентации.', '/images/factory/placeholder-factory.svg'],
+  ['Крупный план материала', 'Фактура, которая помогает продавать изделие через контент.', '/images/products/jumpers/placeholder-jumper.svg']
+] as const;
+
+const heroSecondaryGallery = [
+  {
+    src: '/images/products/scarves/placeholder-scarf.svg',
+    title: 'Цветовые варианты для теста',
+    description: 'Проверка нескольких оттенков в одной поставке под разные сегменты аудитории.'
+  },
+  {
+    src: '/images/samples/placeholder-knit-closeup.svg',
+    title: 'Варианты узора и фактуры',
+    description: 'Разные визуальные решения для отличия карточки от однотипных предложений.'
+  },
+  {
+    src: '/images/samples/placeholder-batch.svg',
+    title: 'Оптовая партия и упаковка',
+    description: 'Фокус на подготовке к поставке и повторному дозаказу при подтверждении спроса.'
+  }
 ] as const;
 
 export default function KosynkaOptPage() {
@@ -214,29 +233,7 @@ export default function KosynkaOptPage() {
               </div>
             </article>
 
-            <div className="grid gap-4 sm:grid-cols-[0.95fr_1.05fr]">
-              <div className="rounded-[30px] bg-[#17181c] p-7 text-white shadow-[0_24px_60px_rgba(19,25,22,0.2)] sm:p-8">
-                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-white/60">Быстрый контакт</p>
-                <div className="mt-5 space-y-4">
-                  <p className="text-2xl font-semibold tracking-[-0.03em]">Если нужно быстро обсудить цену, партию, узор и цвета — выходите напрямую на производство.</p>
-                  <div className="grid gap-3 sm:grid-cols-2">
-                    <a href={PHONE_LINK} className="rounded-full bg-white px-5 py-3 text-center text-sm font-semibold text-[#17181c] transition hover:bg-[#f0ede5]">
-                      {PHONE_DISPLAY}
-                    </a>
-                    <a href={TELEGRAM_URL} target="_blank" rel="noreferrer" className="rounded-full border border-white/15 px-5 py-3 text-center text-sm font-semibold text-white transition hover:bg-white/10">
-                      Telegram
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div className="card-surface p-7 sm:p-8">
-                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#16352a]">Для кого страница</p>
-                <h2 className="mt-5 text-3xl font-semibold tracking-[-0.04em] text-[#17181c]">Оптовая страница под закупку, а не под розницу.</h2>
-                <p className="mt-4 text-sm leading-7 text-[#5b5f65]">
-                  Здесь собрана логика для B2B-покупателя: селлеров Wildberries и Ozon, магазинов, шоурумов, оптовиков и закупщиков аксессуаров.
-                </p>
-              </div>
-            </div>
+            <HeroPhotoCarousel items={heroSecondaryGallery} intervalMs={4200} />
           </div>
 
           <div className="soft-panel relative overflow-hidden px-6 py-8 sm:px-8 sm:py-10 lg:px-12 lg:py-12">
@@ -646,6 +643,7 @@ export default function KosynkaOptPage() {
         <div className="mb-10 max-w-3xl">
           <span className="eyebrow">Галерея</span>
           <h2 className="mt-5 text-3xl font-semibold tracking-[-0.04em] text-[#17181c] sm:text-4xl">Как можно подать товар в опте и под маркетплейсы</h2>
+          <p className="mt-4 text-base leading-8 text-[#5b5e65]">В блок удобно подставлять реальные фото разных цветов, вариантов узора, упаковки и контента для карточек товара.</p>
         </div>
         <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
           {galleryCards.map(([title, description, image]) => (
