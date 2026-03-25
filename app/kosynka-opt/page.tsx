@@ -214,7 +214,7 @@ export default function KosynkaOptPage() {
           <div className="grid gap-6">
             <article className="group relative min-h-[640px] overflow-hidden rounded-[34px] border border-black/[0.06] bg-[#ddd6cf] shadow-[0_24px_70px_rgba(19,25,22,0.14)]">
               <Image
-                src="/images/products/hats/placeholder-hat.svg"
+                src="/images/products/kosynka/0.png"
                 alt="Вязаная косынка оптом для Wildberries, Ozon и магазинов"
                 fill
                 priority
@@ -495,7 +495,7 @@ export default function KosynkaOptPage() {
         <div className="rounded-[34px] border border-[#16352a]/10 bg-[#16352a] p-8 text-white shadow-[0_28px_70px_rgba(22,53,42,0.24)] sm:p-10">
           <div className="grid gap-8 lg:grid-cols-[0.88fr_1.12fr] lg:items-start">
             <div>
-              <span className="inline-flex rounded-full border border-white/14 bg-white/10 px-3 py-2 text-[11px] font-semibold uppercase tracking-[0.2em] text-white/85">Сильный блок</span>
+              <span className="inline-flex rounded-full border border-white/14 bg-white/10 px-3 py-2 text-[11px] font-semibold uppercase tracking-[0.2em] text-white/85">Для маркетплейсов</span>
               <h2 className="mt-5 text-3xl font-semibold tracking-[-0.04em] text-white sm:text-5xl">Почему товар особенно удобен для Wildberries и Ozon</h2>
               <p className="mt-5 max-w-xl text-base leading-8 text-white/78">
                 Для селлеров маркетплейсов здесь сходятся сразу несколько факторов: понятная категория, компактность в упаковке, удобство логистики, возможность тестировать цвета, отличаться узором и масштабировать закупку, если спрос подтверждается.
