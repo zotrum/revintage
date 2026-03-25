@@ -54,7 +54,7 @@ export function HeroPhotoCarousel({ items, intervalMs = 5000 }: HeroPhotoCarouse
               key={`${slide.src}-${slide.title}`}
               className={`absolute inset-0 transition-opacity duration-500 ${index === activeIndex ? 'opacity-100' : 'pointer-events-none opacity-0'}`}
             >
-              <Image src={slide.src} alt={slide.title} fill priority={index === 0} className="object-cover transition duration-700 group-hover:scale-105" />
+              <Image src={slide.src} alt={slide.title} fill priority={index === 0} className="object-fill transition duration-700 group-hover:scale-105" />
               <div className="absolute inset-0 bg-gradient-to-t from-[#131518]/90 via-[#131518]/25 to-transparent" />
             </div>
           ))}
