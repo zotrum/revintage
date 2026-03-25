@@ -201,7 +201,7 @@ export default function KosynkaOptPage() {
             <a href="#lead">Заявка</a>
           </nav>
           <a href="#lead" className="rounded-full bg-[#17181c] px-4 py-2 text-sm font-medium text-white transition hover:bg-black">
-            Получить опт
+            Получить образец
           </a>
         </div>
       </header>
@@ -709,13 +709,7 @@ export default function KosynkaOptPage() {
             </p>
             <div className="mt-8 grid gap-3">
               <a href="#lead-form" className="rounded-[22px] bg-[#17181c] px-5 py-4 text-sm font-semibold text-white transition hover:bg-black">
-                Получить оптовые условия
-              </a>
-              <a href="#economy" className="rounded-[22px] border border-black/10 bg-white px-5 py-4 text-sm font-semibold text-[#17181c] transition hover:bg-[#f4f1eb]">
-                Запросить расчет партии
-              </a>
-              <a href="#flexibility" className="rounded-[22px] border border-[#16352a]/15 bg-[#16352a]/[0.07] px-5 py-4 text-sm font-semibold text-[#16352a] transition hover:bg-[#16352a]/[0.11]">
-                Обсудить цвета и узор
+                Получить образец
               </a>
               <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="rounded-[22px] bg-[#25d366] px-5 py-4 text-sm font-semibold text-[#07130c] transition hover:bg-[#33dd73]">
                 Написать в WhatsApp
